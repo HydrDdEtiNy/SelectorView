@@ -8,7 +8,7 @@ import android.widget.TextView;
 /**
  */
 
-public class SignalSelectorView extends SelectorView {
+public class SingleSelectorView extends SelectorView {
     public static int SELECT_NONE = -1;
 
     private int mSelectedPos;
@@ -17,15 +17,15 @@ public class SignalSelectorView extends SelectorView {
 
     private OnItemClickListener mListener;
 
-    public SignalSelectorView(Context context) {
+    public SingleSelectorView(Context context) {
         super(context);
     }
 
-    public SignalSelectorView(Context context, AttributeSet attrs) {
+    public SingleSelectorView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public SignalSelectorView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SingleSelectorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -62,12 +62,12 @@ public class SignalSelectorView extends SelectorView {
         }
     }
 
-    public SignalSelectorView setOnItemClickListener(OnItemClickListener listener) {
+    public SingleSelectorView setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
         return this;
     }
 
-    public SignalSelectorView setSelectPos(int pos) {
+    public SingleSelectorView setSelectPos(int pos) {
         if (pos < mTitles.length) {
             mSelectedPos = pos;
             updateSelectedChildBg(mSelectedPos);
@@ -81,7 +81,7 @@ public class SignalSelectorView extends SelectorView {
         return mSelectedPos;
     }
 
-    public SignalSelectorView setSelectNone(boolean selectNone) {
+    public SingleSelectorView setSelectNone(boolean selectNone) {
         bSelectNone = selectNone;
         return this;
     }
