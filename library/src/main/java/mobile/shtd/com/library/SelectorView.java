@@ -2,7 +2,6 @@ package mobile.shtd.com.library;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -11,12 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.yuan.library.selector.SelectorDrawable;
-
 
 /**
  */
-abstract class SelectTypeView extends ViewGroup {
+abstract class SelectorView extends ViewGroup {
 
     protected int mMaxNumber = 2;
 
@@ -38,15 +35,15 @@ abstract class SelectTypeView extends ViewGroup {
 
     protected int mTextSize;
 
-    public SelectTypeView(Context context) {
+    public SelectorView(Context context) {
         this(context, null);
     }
 
-    public SelectTypeView(Context context, AttributeSet attrs) {
+    public SelectorView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SelectTypeView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SelectorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

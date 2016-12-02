@@ -6,14 +6,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 /**
  */
 
-public class MultiSelectTypeView extends SelectTypeView {
+public class MultiSelectorView extends SelectorView {
 
     private List<Integer> mSelectedPos;
 
@@ -21,16 +20,16 @@ public class MultiSelectTypeView extends SelectTypeView {
 
     private OnItemClickListener mListener;
 
-    public MultiSelectTypeView(Context context) {
+    public MultiSelectorView(Context context) {
         super(context);
         mSelectedPos = new ArrayList<>();
     }
 
-    public MultiSelectTypeView(Context context, AttributeSet attrs) {
+    public MultiSelectorView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public MultiSelectTypeView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public MultiSelectorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -69,7 +68,7 @@ public class MultiSelectTypeView extends SelectTypeView {
     }
 
 
-    public MultiSelectTypeView setSelectPos(Integer[] pos) {
+    public MultiSelectorView setSelectPos(Integer[] pos) {
         mSelectedPos = new ArrayList<>();
         if (pos != null) {
             for (int p : pos) {
@@ -87,12 +86,12 @@ public class MultiSelectTypeView extends SelectTypeView {
         return mSelectedPos.toArray(new Integer[mSelectedPos.size()]);
     }
 
-    public MultiSelectTypeView setSelectNone(boolean selectNone) {
+    public MultiSelectorView setSelectNone(boolean selectNone) {
         bSelectNone = selectNone;
         return this;
     }
 
-    public MultiSelectTypeView setOnItemClickListener(OnItemClickListener listener) {
+    public MultiSelectorView setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
         return this;
     }
